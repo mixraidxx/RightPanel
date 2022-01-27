@@ -57,7 +57,7 @@ public class ResizableSheetCenter {
         sheets.append(builder)
     }
 
-    public func remove(id: String = ResizableSheet.defaultId) {
+    public func remove(id: String = RightPanel.defaultId) {
         sheets = sheets.filter { $0.id != id }
     }
 
@@ -73,8 +73,8 @@ public class ResizableSheetCenter {
 
 extension ResizableSheetBuilder {
 
-    func build() -> ResizableSheet {
-        ResizableSheet(
+    func build() -> RightPanel {
+        RightPanel(
             id: id,
             state: state,
             model: model,
@@ -108,7 +108,7 @@ public class PreviewResizableSheetCenter: ResizableSheetCenter, ObservableObject
         sheets.append(builder)
     }
 
-    public override func remove(id: String = ResizableSheet.defaultId) {
+    public override func remove(id: String = RightPanel.defaultId) {
         sheets = sheets.filter { $0.id != id }
     }
 }
