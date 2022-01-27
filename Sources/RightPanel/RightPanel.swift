@@ -79,7 +79,7 @@ public struct RightPanel: View, Identifiable {
                 if model.fullSize != .zero {
                     VStack(spacing: 0) {
                         config.outside(currentContext)
-                            .frame(height: model.offset(state: state, in: proxy.size))
+                            .frame(width: model.offset(state: state, in: proxy.size))
                             .animation(config.animation)
                         Spacer(minLength: 0)
                     }
@@ -94,7 +94,7 @@ public struct RightPanel: View, Identifiable {
                                 .gesture(gesture)
                         )
                         .cornerRadius(config.cornerRadius, corners: [.topLeft, .topRight])
-                        .offset(y: model.offset(state: state, in: proxy.size))
+                        .offset(x: model.offset(state: state, in: proxy.size))
                         .animation(config.animation)
                         .transition(.move(edge: .bottom).animation(config.animation))
                 }
