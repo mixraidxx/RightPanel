@@ -28,7 +28,7 @@ extension View {
 
     public func resizableSheet(
         _ state: Binding<ResizableSheetState>,
-        id: String = ResizableSheet.defaultId,
+        id: String = RightPanel.defaultId,
         builder builderMidifier: (ResizableSheetBuilder) -> ResizableSheetBuilder
     ) -> some View {
         let model = ResizableSheetModel(state: state.wrappedValue)
